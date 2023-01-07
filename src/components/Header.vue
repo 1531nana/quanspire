@@ -1,11 +1,11 @@
 <template>
 	<nav
-		class="navbar navbar-expand-lg navbar-dark bg-dark"
+		class="navbar navbar-expand-lg navbar-dark"
 		style="background-color: black"
 	>
-		<a class="navbar-brand" href="#"
-			><img src="../assets/Quanspire.png" alt=""
-		/></a>
+		<a class="navbar-brand" href="#">
+			<img src="../assets/Quanspire.png" alt="" class="logo" />
+		</a>
 		<button
 			class="navbar-toggler"
 			type="button"
@@ -43,27 +43,136 @@
 				<li class="nav-item">
 					<a class="nav-link" href="#">Supervisor</a>
 				</li>
-				<div>
-					<div class="nav-link">Currencias</div>
-					<div class="nav-link">Commodities</div>
-				</div>
-                <div>
-                    <p class="nav-link">Iván Herrera</p>
-                    <img src="../assets/users.png" alt="" style="height: 10px"/>
-                </div>
-				<div>
-					<div class="nav-link">Light</div>
-					<div class="nav-link">Dark</div>
-				</div>
 			</ul>
 		</div>
-                    <img src="../assets/off.png" alt="" />
+		<div class="d-flex gap-3 align-items-center">
+			<div>
+				<div class="d-flex rounded-pill bg-dark flex-row currencies">
+					<div
+						class="btn btn-primary rounded-pill border-0 d-flex align-items-center interruptor"
+						type="button"
+					>
+						Currencies
+					</div>
+					<div
+						class="btn btn-dark rounded-pill border-0 d-flex align-items-center interruptor"
+						type="button"
+						style="color: #ffffff8c"
+					>
+						Commodities
+					</div>
+				</div>
+			</div>
+			<div class="d-flex flex-row gap-2 p-3 border-1 border-start border-end">
+				<div class="d-flex align-items-baseline gap-1">
+					<p class="m-0" style="color: #ffffff8c">Iván Herrera</p>
+					<img src="../assets/fa_user.svg" alt="user" />
+				</div>
+				<div class="d-flex currencies rounded-pill bg-dark">
+					<div
+						class="btn btn-dark rounded-pill border-0 d-flex align-items-center"
+						style="color: #ffffff8c"
+					>
+						Light
+					</div>
+					<div
+						class="btn btn-primary rounded-pill border-0 d-flex align-items-center"
+					>
+						Dark
+					</div>
+				</div>
+			</div>
+			<img src="../assets/off.png" alt="" class="off" />
+		</div>
 	</nav>
 </template>
 
-
 <style>
-#app .bg-dark{
-    background: black !important;
+.navbar-expand-lg .navbar-nav {
+	border-left: 1px solid;
+}
+.currencies {
+	height: 25px;
+}
+.interruptor {
+	height: 100%;
+}
+.off {
+	padding-right: 1rem;
+}
+
+@media (min-width: 1024px) {
+	.navbar-brand {
+		margin-right: 0 !important;
+	}
+	.logo {
+		width: 150px;
+	}
+	.navbar-expand-lg .navbar-nav .nav-link {
+		padding: 4px !important;
+	}
+	.navbar-dark {
+		font-size: 12px !important;
+	}
+	.gap-3 {
+		gap: 0.5rem !important;
+	}
+	.currencies {
+		height: 20px !important;
+	}
+	.btn {
+		font-size: 12px !important;
+	}
+	.p-3 {
+		padding: 0.5rem;
+	}
+	.off {
+		padding-right: 0.25rem !important;
+	}
+}
+
+@media (min-width: 1280px) {
+	.navbar-brand {
+		margin-right: 0 !important;
+	}
+	.logo {
+		width: 200px;
+	}
+	.navbar-expand-lg .navbar-nav .nav-link {
+		padding: 5px !important;
+	}
+	.navbar-dark {
+		font-size: 14px !important;
+	}
+	.gap-3 {
+		gap: 0.5rem !important;
+	}
+	.currencies {
+		height: 20px !important;
+	}
+	.btn {
+		font-size: 14px !important;
+	}
+	.p-3 {
+		padding: 0.5rem;
+	}
+}
+
+@media (min-width: 1400px) {
+	.navbar-dark {
+		font-size: 16px !important;
+	}
+	.navbar-dark {
+		font-size: 16px !important;
+	}
+	.currencies {
+		height: 25px !important;
+	}
+	.btn {
+		font-size: 16px !important;
+	}
+	.p-3 {
+		padding: 1rem !important;
+	}
 }
 </style>
