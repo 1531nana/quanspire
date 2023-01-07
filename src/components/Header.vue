@@ -87,7 +87,7 @@
 	</nav>
 </template>
 
-<style>
+<style scoped>
 .navbar-expand-lg .navbar-nav {
 	border-left: 1px solid;
 }
@@ -124,7 +124,7 @@
 		font-size: 12px !important;
 	}
 	.p-3 {
-		padding: 0.5rem;
+		padding: 0.5rem !important;
 	}
 	.off {
 		padding-right: 0.25rem !important;
@@ -138,9 +138,13 @@
 	.logo {
 		width: 200px;
 	}
+	.navbar-expand-lg .navbar-nav{
+		padding-left: 5px !important;
+	}
 	.navbar-expand-lg .navbar-nav .nav-link {
 		padding: 5px !important;
 	}
+
 	.navbar-dark {
 		font-size: 14px !important;
 	}
