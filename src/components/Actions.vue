@@ -18,8 +18,9 @@
 				></path>
 			</svg>
 		</div>
-		<div class="d-flex">
+		<div class=" container-actions">
 			<span class="actions">
+				<span>+</span>
 				Fields
 				<div class="container-switch">
 					<input
@@ -64,7 +65,7 @@
 }
 .bd-search {
 	display: flex;
-	width: 100%;
+	/* width: 100%; */
 	height: 100%;
 	position: relative;
 }
@@ -121,5 +122,28 @@ transition: 0.3s;
 }
 #btn-switch{
     display: none;
+}
+.container-actions{
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+
+@media (min-width: 1280px){
+.d-flex {
+	gap: 60px;
+}
+.img-actions {
+	width: 20px;
+}
+}
+
+@media(min-width: 1400px){
+.d-flex {
+	gap: 75px;
+}
+.img-actions {
+	width: 22px;
+}
 }
 </style>
