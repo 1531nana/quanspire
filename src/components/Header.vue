@@ -51,6 +51,7 @@
 					<div
 						class="btn btn-primary rounded-pill border-0 d-flex align-items-center interruptor"
 						type="button"
+						style="background: #2c4190"
 					>
 						Currencies
 					</div>
@@ -77,6 +78,7 @@
 					</div>
 					<div
 						class="btn btn-primary rounded-pill border-0 d-flex align-items-center"
+						style="background: #2c4190"
 					>
 						Dark
 					</div>
@@ -91,6 +93,11 @@
 .navbar-expand-lg .navbar-nav {
 	border-left: 1px solid;
 }
+ .navbar-dark {
+	box-shadow: -1px 1px 5px grey !important;
+	z-index: 1 !important;
+}
+
 .currencies {
 	height: 25px;
 }
@@ -138,7 +145,7 @@
 	.logo {
 		width: 200px;
 	}
-	.navbar-expand-lg .navbar-nav{
+	.navbar-expand-lg .navbar-nav {
 		padding-left: 5px !important;
 	}
 	.navbar-expand-lg .navbar-nav .nav-link {

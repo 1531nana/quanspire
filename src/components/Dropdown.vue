@@ -54,6 +54,7 @@
 	gap: 25px;
 	align-items: center;
 	padding-left: 5px;
+  padding: 10px;
 }
 .dpd-button {
 	width: 15%;
