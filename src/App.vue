@@ -1,17 +1,20 @@
 <template>
   <Header />
   <Dropdown />
+  <Actions />
 </template>
 
 <script>
 import Header  from "./components/Header.vue";
 import Dropdown  from "./components/Dropdown.vue";
+import Actions  from "./components/Actions.vue";
 
 export default {
   name: 'App',
   components: {
     Header,
-    Dropdown
+    Dropdown,
+    Actions
   }
 }
 </script>
