@@ -2,19 +2,22 @@
   <Header />
   <Dropdown />
   <Actions />
+  <Table />
 </template>
 
 <script>
 import Header  from "./components/Header.vue";
 import Dropdown  from "./components/Dropdown.vue";
 import Actions  from "./components/Actions.vue";
+import Table  from "./components/Table.vue";
 
 export default {
   name: 'App',
   components: {
     Header,
     Dropdown,
-    Actions
+    Actions,
+    Table
   }
 }
 </script>
