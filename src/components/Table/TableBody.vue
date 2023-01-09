@@ -1,5 +1,9 @@
 <template>
-	<tr v-for="(data, i) in datas" :key="i" style="background: rgb(0 0 0 / 78%) !important">
+	<tr
+		v-for="(data, i) in datas"
+		:key="i"
+		style="background: rgb(0 0 0 / 78%) !important"
+	>
 		<TableBodyActions />
 		<td>{{ `Q2460${index - 1}` }}</td>
 		<td>{{ datas[i].portfolio }}</td>
@@ -56,3 +60,11 @@ export default {
 	},
 };
 </script>
+
+<style scoped>
+tr:last-child {
+	border-width: 0px !important;
+	border-color: transparent !important;
+	border-style: none !important;
+}
+</style>

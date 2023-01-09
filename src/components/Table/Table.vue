@@ -1,5 +1,5 @@
 <template>
-	<table class="table  table-hover" id="table">
+	<table class="table table-fixed " id="table">
 		<thead class="table-dark">
 			<tr>
 				<th scope="col">
@@ -74,15 +74,22 @@
 		<tbody id="tbody" style="background: #0000009e !important">
 			<TableBody v-for="i in 11" :key="i" :index="i" />
 		</tbody>
+		<tfoot style="background: rgb(13 13 13 / 97%)">
+			<TableFooter/>
+		</tfoot>
 	</table>
+	
 </template>
 
 <script>
 import TableBody from "./TableBody.vue";
+import TableFooter from "./TableFooter.vue";
+
 
 export default {
 	components: {
 		TableBody,
+		TableFooter,
 	},
 };
 </script>
@@ -114,13 +121,8 @@ thead th {
 	color: #ffffff8f !important;
 	font-size: 12px;
 	border: none;
-	background: #0000009E;
-	/* border-width: 1px 0 !important; */
-}
-#tbody{
-	border-bottom-width: 0.1px;
-    border-bottom-color: #ffffff59;
-	background: #0000009E;
+  border-bottom-width: 0.1px;
+  border-bottom-color: #ffffff59;
 }
 .table>:not(caption)>*>*{
 	border-bottom-width: 0.1px !important;
