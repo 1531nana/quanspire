@@ -93,8 +93,8 @@
 .navbar-expand-lg .navbar-nav {
 	border-left: 1px solid;
 }
- .navbar-dark {
-	box-shadow: -1px 1px 5px grey !important;
+.navbar-dark {
+	box-shadow: -1px 1px 3px grey !important;
 	z-index: 1 !important;
 }
 

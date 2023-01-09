@@ -9,7 +9,7 @@
 import Header  from "./components/Header.vue";
 import Dropdown  from "./components/Dropdown.vue";
 import Actions  from "./components/Actions.vue";
-import Table  from "./components/Table.vue";
+import Table  from "./components/Table/Table.vue";
 
 export default {
   name: 'App',
@@ -29,6 +29,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #ffffff8c;
+  /* background: black; */
   /* color: #2c3e50; */
 }
 </style>
