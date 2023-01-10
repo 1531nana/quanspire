@@ -5,7 +5,7 @@
 			<svg
 				width="20"
 				height="20"
-				class="DocSearch-Search-Icon position-absolute"
+				class="search-Icon position-absolute"
 				viewBox="0 0 20 20"
 			>
 				<path
@@ -18,7 +18,7 @@
 				></path>
 			</svg>
 		</div>
-		<div class=" container-actions">
+		<div class="container-actions">
 			<span class="actions">
 				<span>+</span>
 				Fields
@@ -29,8 +29,7 @@
 						role="switch"
 						id="btn-switch"
 					/>
-                    <label for="btn-switch" class="lbl-switch"></label>
-					
+					<label for="btn-switch" class="lbl-switch"></label>
 				</div>
 			</span>
 			<span class="actions"
@@ -65,11 +64,10 @@
 }
 .bd-search {
 	display: flex;
-	/* width: 100%; */
 	height: 100%;
 	position: relative;
 }
-.DocSearch-Search-Icon {
+.search-Icon {
 	bottom: 20%;
 	left: 5%;
 }
@@ -91,59 +89,58 @@
 .img-actions {
 	width: 16px;
 }
-.lbl-switch{
-    /* display: inline-block; */
-    display: flex;
-    align-items: center;
-    width: 40px;
-    height: 20px;
-    background: #ffffffc8;
-    border-radius: 100px;
-    position: relative;
-    cursor: pointer;
+.lbl-switch {
+	display: flex;
+	align-items: center;
+	width: 40px;
+	height: 20px;
+	background: #ffffffc8;
+	border-radius: 100px;
+	position: relative;
+	cursor: pointer;
 }
-#btn-switch:checked~ .lbl-switch{
-    background: #2c4190;
+#btn-switch:checked ~ .lbl-switch {
+	background: #2c4190;
 }
 
-.lbl-switch:after{
-position: absolute;
-content: '';
-width: 25px;
-height: 25px;
-border: 1px solid #ffffffc8;
-background: black;
-border-radius: 100px;
-left: 0;
-transition: 0.3s;
+.lbl-switch:after {
+	position: absolute;
+	content: "";
+	width: 25px;
+	height: 25px;
+	border: 1px solid #ffffffc8;
+	background: black;
+	border-radius: 100px;
+	left: 0;
+	transition: 0.3s;
 }
-#btn-switch:checked~ .lbl-switch:after{
-    left: 25px;
+#btn-switch:checked ~ .lbl-switch:after {
+	left: 25px;
 }
-#btn-switch{
-    display: none;
+#btn-switch {
+	display: none;
 }
-.container-actions{
+.container-actions {
 	display: flex;
 	width: 100%;
 	justify-content: space-around;
 }
 
-@media (min-width: 1280px){
-.d-flex {
-	gap: 60px;
-}
-.img-actions {
-	width: 20px;
-}
+@media (min-width: 1280px) {
+	.d-flex {
+		gap: 60px;
+	}
+	.img-actions {
+		width: 20px;
+	}
 }
 
-@media(min-width: 1400px){
-.d-flex {
-	gap: 75px;
-}
-.img-actions {
-	width: 22px;
-}
+@media (min-width: 1400px) {
+	.d-flex {
+		gap: 75px;
+	}
+	.img-actions {
+		width: 22px;
+	}
 }
 </style>

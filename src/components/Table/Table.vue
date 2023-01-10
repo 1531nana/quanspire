@@ -1,90 +1,91 @@
 <template>
-	<table class="table table-fixed " id="table">
-		<thead class="table-dark">
-			<tr>
-				<th scope="col">
-					<div class="containerTheadTh" style="gap: 5px">
-						Actions
-						<img src="../../assets/arrows.svg" alt="" />
-					</div>
-				</th>
-				<th scope="col">
-					<div class="containerTheadTh">
-						Code <img src="../../assets/arrows.svg" alt="" />
-						<img src="../../assets/filter.svg" alt="" />
-					</div>
-				</th>
-				<th scope="col">
-					<div class="containerTheadTh">
-						Portfolio <img src="../../assets/arrows.svg" alt="" />
-						<img src="../../assets/filter.svg" alt="" />
-					</div>
-				</th>
+	<div class="container-tableWithFooter">
+		<table class="table table-fixed" id="table">
+			<thead class="table-dark">
+				<tr>
+					<th scope="col">
+						<div class="containerTheadTh" style="gap: 5px">
+							Actions
+							<img src="../../assets/arrows.svg" alt="" />
+						</div>
+					</th>
+					<th scope="col">
+						<div class="containerTheadTh">
+							Code <img src="../../assets/arrows.svg" alt="" />
+							<img src="../../assets/filter.svg" alt="" />
+						</div>
+					</th>
+					<th scope="col">
+						<div class="containerTheadTh">
+							Portfolio <img src="../../assets/arrows.svg" alt="" />
+							<img src="../../assets/filter.svg" alt="" />
+						</div>
+					</th>
 
-				<th scope="col" class="text-center">
-					<div class="containerTheadTh">
-						Rate <img src="../../assets/arrows.svg" alt="" />
-						<img src="../../assets/filter.svg" alt="" />
-					</div>
-				</th>
-				<th scope="col">
-					<div class="containerTheadTh">
-						Exposure Type <img src="../../assets/arrows.svg" alt="" />
-						<img src="../../assets/filter.svg" alt="" />
-					</div>
-				</th>
-				<th scope="col">
-					<div class="containerTheadTh">
-						Notional <img src="../../assets/arrows.svg" alt="" />
-						<img src="../../assets/filter.svg" alt="" />
-					</div>
-				</th>
-				<th scope="col">
-					<div class="containerTheadTh">
-						Currency <img src="../../assets/arrows.svg" alt="" />
-						<img src="../../assets/filter.svg" alt="" />
-					</div>
-				</th>
-				<th scope="col">
-					<div class="containerTheadTh">
-						Expected Cash Flow Date <img src="../../assets/arrows.svg" alt="" />
-						<img src="../../assets/filter.svg" alt="" />
-					</div>
-				</th>
-				<th scope="col">
-					<div class="containerTheadTh">
-						Issue Date <img src="../../assets/arrows.svg" alt="" />
-						<img src="../../assets/filter.svg" alt="" />
-					</div>
-				</th>
-				<th scope="col">
-					<div class="containerTheadTh">
-						Rate at Issue Date <img src="../../assets/arrows.svg" alt="" />
-						<img src="../../assets/filter.svg" alt="" />
-					</div>
-				</th>
-				<th scope="col">
-					<div class="containerTheadTh">
-						Invoce Due Date <img src="../../assets/arrows.svg" alt="" />
-						<img src="../../assets/filter.svg" alt="" />
-					</div>
-				</th>
-			</tr>
-		</thead>
-		<tbody id="tbody" style="background: #0000009e !important">
-			<TableBody v-for="i in 11" :key="i" :index="i" />
-		</tbody>
-		<tfoot style="background: rgb(13 13 13 / 97%)">
-			<TableFooter/>
-		</tfoot>
-	</table>
-	
+					<th scope="col" class="text-center">
+						<div class="containerTheadTh">
+							Rate <img src="../../assets/arrows.svg" alt="" />
+							<img src="../../assets/filter.svg" alt="" />
+						</div>
+					</th>
+					<th scope="col">
+						<div class="containerTheadTh">
+							Exposure Type <img src="../../assets/arrows.svg" alt="" />
+							<img src="../../assets/filter.svg" alt="" />
+						</div>
+					</th>
+					<th scope="col">
+						<div class="containerTheadTh">
+							Notional <img src="../../assets/arrows.svg" alt="" />
+							<img src="../../assets/filter.svg" alt="" />
+						</div>
+					</th>
+					<th scope="col">
+						<div class="containerTheadTh">
+							Currency <img src="../../assets/arrows.svg" alt="" />
+							<img src="../../assets/filter.svg" alt="" />
+						</div>
+					</th>
+					<th scope="col">
+						<div class="containerTheadTh">
+							Expected Cash Flow Date
+							<img src="../../assets/arrows.svg" alt="" />
+							<img src="../../assets/filter.svg" alt="" />
+						</div>
+					</th>
+					<th scope="col">
+						<div class="containerTheadTh">
+							Issue Date <img src="../../assets/arrows.svg" alt="" />
+							<img src="../../assets/filter.svg" alt="" />
+						</div>
+					</th>
+					<th scope="col">
+						<div class="containerTheadTh">
+							Rate at Issue Date <img src="../../assets/arrows.svg" alt="" />
+							<img src="../../assets/filter.svg" alt="" />
+						</div>
+					</th>
+					<th scope="col">
+						<div class="containerTheadTh">
+							Invoce Due Date <img src="../../assets/arrows.svg" alt="" />
+							<img src="../../assets/filter.svg" alt="" />
+						</div>
+					</th>
+				</tr>
+			</thead>
+			<tbody id="tbody" style="background: #0000009e !important">
+				<TableBody v-for="i in 11" :key="i" :index="i" />
+			</tbody>
+		</table>
+		<div class="container-tableFromFooter">
+			<TableFooter />
+		</div>
+	</div>
 </template>
 
 <script>
 import TableBody from "./TableBody.vue";
 import TableFooter from "./TableFooter.vue";
-
 
 export default {
 	components: {
@@ -95,10 +96,36 @@ export default {
 </script>
 
 <style scoped>
+.container-tableFromFooter {
+	display: flex;
+	justify-content: space-between;
+	height: 50px;
+	align-items: center;
+	background: #373b3e6b;
+}
+.container-tableWithFooter {
+	display: flex;
+	flex-direction: column;
+}
+table {
+	display: block;
+	height: 55vh;
+	overflow-y: auto;
+	position: relative;
+	margin-bottom: 0;
+}
+thead {
+	position: sticky;
+	top: 0;
+}
+tfoot {
+	position: sticky;
+	bottom: 0;
+}
 img {
 	width: 15px;
 }
-#table{
+#table {
 	color: #ffffff8f !important;
 }
 thead th {
@@ -116,17 +143,17 @@ thead th {
 	justify-content: flex-start;
 	align-items: center;
 }
-.table>tbody {
+.table > tbody {
 	text-align: start !important;
 	color: #ffffff8f !important;
 	font-size: 12px;
 	border: none;
-  border-bottom-width: 0.1px;
-  border-bottom-color: #ffffff59;
+	border-bottom-width: 0.1px;
+	border-bottom-color: #ffffff59;
 }
-.table>:not(caption)>*>*{
+.table > :not(caption) > * > * {
 	border-bottom-width: 0.1px !important;
-    border-bottom-color: #ffffff59 !important;
+	border-bottom-color: #ffffff59 !important;
 }
 @media (min-width: 1280px) {
 	thead th {
@@ -136,7 +163,7 @@ thead th {
 		padding: 5px 0;
 		gap: 5px;
 	}
-	.table>tbody{
+	.table > tbody {
 		font-size: 14px;
 	}
 }
@@ -148,4 +175,14 @@ thead th {
 		width: 16px;
 	}
 }
+
+/* paleta de colores
+
+black: negro
+#0F0E13 : negro un poco más claro
+#232227: gris oscuro
+#636967 : letra, gris más claro
+#2c4190 : azul 
+
+*/
 </style>

@@ -1,52 +1,69 @@
 <template>
-	<tr>
-		<td colspan="9">
-			<ul class="pagination">
-				<li class="page-item">
-					<a class="page-link" href="#" aria-label="Previous">
-						<span aria-hidden="true">&laquo;</span>
-					</a>
-				</li>
-				<li class="page-item">
-					<a class="page-link" href="#" aria-label="Next">
-						<span aria-hidden="true">‹</span>
-					</a>
-				</li>
-				<li class="page-item"><a class="page-link active" href="#">1</a></li>
-				<li class="page-item"><a class="page-link" href="#">2</a></li>
-				<li class="page-item"><a class="page-link" href="#">3</a></li>
-				<li class="page-item"><a class="page-link" href="#">4</a></li>
-				<li class="page-item"><a class="page-link" href="#">5</a></li>
-				<li class="page-item">
-					<a class="page-link" href="#" aria-label="Next">
-						<span aria-hidden="true">›</span>
-					</a>
-				</li>
-				<li class="page-item">
-					<a class="page-link" href="#" aria-label="Next">
-						<span aria-hidden="true">&raquo;</span>
-					</a>
-				</li>
-			</ul>
-		</td>
-		<td colspan="2" class="show">
-			<label for="" class="show-pages">Showing 1 to 15 of 145 entries</label>
-			<button
-				class="btn btn-dark dpd-button"
-				type="button"
-				data-bs-toggle="dropdown"
-				aria-expanded="false"
-			>
-				15 <img src="../../assets/select.svg" alt="" />
-			</button>
-			<ul class="dropdown-menu">
-				<li><a class="dropdown-item" href="#">30</a></li>
-			</ul>
-		</td>
-	</tr>
+	<ul class="pagination">
+		<li class="page-item">
+			<a class="page-link" href="#" aria-label="Previous">
+				<span aria-hidden="true">&laquo;</span>
+			</a>
+		</li>
+		<li class="page-item">
+			<a class="page-link" href="#" aria-label="Next">
+				<span aria-hidden="true">‹</span>
+			</a>
+		</li>
+		<li class="page-item">
+			<a class="page-link active" href="#">1</a>
+		</li>
+		<li class="page-item"><a class="page-link" href="#">2</a></li>
+		<li class="page-item"><a class="page-link" href="#">3</a></li>
+		<li class="page-item"><a class="page-link" href="#">4</a></li>
+		<li class="page-item"><a class="page-link" href="#">5</a></li>
+		<li class="page-item">
+			<a class="page-link" href="#" aria-label="Next">
+				<span aria-hidden="true">›</span>
+			</a>
+		</li>
+		<li class="page-item">
+			<a class="page-link" href="#" aria-label="Next">
+				<span aria-hidden="true">&raquo;</span>
+			</a>
+		</li>
+	</ul>
+
+	<div class="show">
+		<label for="" class="show-pages">Showing 1 to 15 of 145 entries</label>
+		<button
+			class="btn btn-dark dpd-button"
+			type="button"
+			data-bs-toggle="dropdown"
+			aria-expanded="false"
+		>
+			15 <img src="../../assets/select.svg" alt="" />
+		</button>
+		<ul class="dropdown-menu">
+			<li><a class="dropdown-item" href="#">30</a></li>
+		</ul>
+	</div>
 </template>
 
+<script>
+import Tabs from "../Tabs.vue";
+
+export default {
+	components: {
+		Tabs,
+	},
+};
+</script>
+
 <style scoped>
+.pagination {
+	margin: 0;
+}
+.d-flex {
+	flex-direction: row;
+	justify-content: space-between;
+	background: #373b3e52;
+}
 .show {
 	padding: 0;
 	border: none;
@@ -131,7 +148,7 @@ img {
 	}
 }
 @media (min-width: 1700px) {
-  	.show-pages {
+	.show-pages {
 		font-size: 16px;
 	}
 	.dpd-button {
@@ -148,9 +165,8 @@ img {
 	}
 }
 @media (min-width: 1800px) {
-  .pagination{
-    gap: 13px;
-  }
+	.pagination {
+		gap: 13px;
+	}
 }
-
 </style>
