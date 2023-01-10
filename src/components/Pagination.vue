@@ -37,23 +37,13 @@
 			data-bs-toggle="dropdown"
 			aria-expanded="false"
 		>
-			15 <img src="../../assets/select.svg" alt="" />
+			15 <img src="../assets/select.svg" alt="" />
 		</button>
 		<ul class="dropdown-menu">
 			<li><a class="dropdown-item" href="#">30</a></li>
 		</ul>
 	</div>
 </template>
-
-<script>
-import Tabs from "../Tabs.vue";
-
-export default {
-	components: {
-		Tabs,
-	},
-};
-</script>
 
 <style scoped>
 .pagination {

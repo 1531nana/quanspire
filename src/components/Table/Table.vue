@@ -85,7 +85,7 @@
 
 <script>
 import TableBody from "./TableBody.vue";
-import TableFooter from "./TableFooter.vue";
+import TableFooter from "../Pagination.vue";
 
 export default {
 	components: {
@@ -113,6 +113,31 @@ table {
 	overflow-y: auto;
 	position: relative;
 	margin-bottom: 0;
+}
+table::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+table::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+table::-webkit-scrollbar-button:increment,table::-webkit-scrollbar-button {
+    display: none;
+} 
+
+table::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+table::-webkit-scrollbar-thumb {
+    background-color: #495057;
+    border-radius: 20px;
+}
+
+table::-webkit-scrollbar-track {
+    border-radius: 10px;  
+	background: #49505742;
 }
 thead {
 	position: sticky;
