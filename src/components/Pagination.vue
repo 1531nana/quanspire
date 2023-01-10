@@ -60,14 +60,14 @@
 }
 .show-pages {
 	color: #ffffff5e;
-	font-size: 8px;
+	font-size: 10px;
 }
 .dpd-button {
 	font-size: 10px;
-	margin-left: 10px;
+	margin: 0 15px 0 15px;
 	background: rgba(0, 0, 0, 0);
 	border: none;
-	border-bottom: 1px solid #ffffff5e;
+	border-bottom: 1px solid #ffffff9c;
 	border-radius: 0;
 	padding-bottom: 2px;
 }
@@ -83,8 +83,8 @@ img {
 }
 .active > .page-link,
 .page-link.active {
-	background: #ffffff5e;
-	border-radius: 5px;
+	background: #ffffff42;
+	border-radius: 2px;
 }
 @media (min-width: 1280px) {
 	.show-pages {

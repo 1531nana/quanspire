@@ -1,7 +1,8 @@
 <template>
 	<div class="container-tableWithFooter">
 		<table class="table table-fixed" id="table">
-			<thead class="table-dark">
+			<thead class="t-head">
+				<!-- <thead class="table-dark"> -->
 				<tr>
 					<th scope="col">
 						<div class="containerTheadTh" style="gap: 5px">
@@ -73,7 +74,7 @@
 					</th>
 				</tr>
 			</thead>
-			<tbody id="tbody" style="background: #0000009e !important">
+			<tbody id="tbody">
 				<TableBody v-for="i in 11" :key="i" :index="i" />
 			</tbody>
 		</table>
@@ -96,12 +97,15 @@ export default {
 </script>
 
 <style scoped>
+.t-head {
+	background: #232227;
+}
 .container-tableFromFooter {
 	display: flex;
 	justify-content: space-between;
-	height: 50px;
+	height: 55px;
 	align-items: center;
-	background: #373b3e6b;
+	background: #0f0e13 !important;
 }
 .container-tableWithFooter {
 	display: flex;
@@ -109,34 +113,35 @@ export default {
 }
 table {
 	display: block;
-	height: 55vh;
+	height: 60vh;
 	overflow-y: auto;
 	position: relative;
 	margin-bottom: 0;
 }
 table::-webkit-scrollbar {
-    -webkit-appearance: none;
+	-webkit-appearance: none;
 }
 
 table::-webkit-scrollbar:vertical {
-    width:10px;
+	width: 10px;
 }
 
-table::-webkit-scrollbar-button:increment,table::-webkit-scrollbar-button {
-    display: none;
-} 
+table::-webkit-scrollbar-button:increment,
+table::-webkit-scrollbar-button {
+	display: none;
+}
 
 table::-webkit-scrollbar:horizontal {
-    height: 10px;
+	height: 10px;
 }
 
 table::-webkit-scrollbar-thumb {
-    background-color: #495057;
-    border-radius: 20px;
+	background-color: #495057;
+	border-radius: 20px;
 }
 
 table::-webkit-scrollbar-track {
-    border-radius: 10px;  
+	border-radius: 10px;
 	background: #49505742;
 }
 thead {
@@ -175,12 +180,16 @@ thead th {
 	border: none;
 	border-bottom-width: 0.1px;
 	border-bottom-color: #ffffff59;
+	background: #0f0e13 !important;
 }
 .table > :not(caption) > * > * {
 	border-bottom-width: 0.1px !important;
 	border-bottom-color: #ffffff59 !important;
 }
 @media (min-width: 1280px) {
+	table {
+		height: 55vh;
+	}
 	thead th {
 		font-size: 14px;
 	}
@@ -193,6 +202,9 @@ thead th {
 	}
 }
 @media (min-width: 1400px) {
+	table {
+		height: 65vh;
+	}
 	thead th {
 		font-size: 16px;
 	}
@@ -201,12 +213,18 @@ thead th {
 	}
 }
 
+@media (min-width: 1650px) {
+	table {
+		height: 48vh;
+	}
+}
+
 /* paleta de colores
 
 black: negro
 #0F0E13 : negro un poco más claro
 #232227: gris oscuro
-#636967 : letra, gris más claro
+#ffffff8f : letra, gris más claro
 #2c4190 : azul 
 
 */

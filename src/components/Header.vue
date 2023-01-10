@@ -1,8 +1,5 @@
 <template>
-	<nav
-		class="navbar navbar-expand-lg navbar-dark"
-		style="background-color: black"
-	>
+	<nav class="navbar navbar-expand-lg navbar">
 		<a class="navbar-brand" href="#">
 			<img src="../assets/Quanspire.png" alt="" class="logo" />
 		</a>
@@ -47,18 +44,16 @@
 		</div>
 		<div class="d-flex gap-3 align-items-center">
 			<div>
-				<div class="d-flex rounded-pill bg-dark flex-row currencies">
+				<div class="d-flex rounded-pill bg-dark flex-row container-btns">
 					<div
-						class="btn btn-primary rounded-pill border-0 d-flex align-items-center interruptor"
+						class="btn btn-primary rounded-pill border-0 d-flex align-items-center btns-c btns-active"
 						type="button"
-						style="background: #2c4190"
 					>
 						Currencies
 					</div>
 					<div
-						class="btn btn-dark rounded-pill border-0 d-flex align-items-center interruptor"
+						class="btn btn-dark rounded-pill border-0 d-flex align-items-center btns-c"
 						type="button"
-						style="color: #ffffff8c"
 					>
 						Commodities
 					</div>
@@ -66,19 +61,17 @@
 			</div>
 			<div class="d-flex flex-row gap-2 p-3 border-1 border-start border-end">
 				<div class="d-flex align-items-baseline gap-1">
-					<p class="m-0" style="color: #ffffff8c">Iván Herrera</p>
-					<img src="../assets/fa_user.svg" alt="user" />
+					<p class="m-0">Iván Herrera</p>
+					<img src="../assets/fa_user.svg" alt="user" class="user" />
 				</div>
-				<div class="d-flex currencies rounded-pill bg-dark">
+				<div class="d-flex container-btns rounded-pill bg-dark">
 					<div
 						class="btn btn-dark rounded-pill border-0 d-flex align-items-center"
-						style="color: #ffffff8c"
 					>
 						Light
 					</div>
 					<div
-						class="btn btn-primary rounded-pill border-0 d-flex align-items-center"
-						style="background: #2c4190"
+						class="btn btn-primary rounded-pill border-0 d-flex align-items-center btns-active"
 					>
 						Dark
 					</div>
@@ -90,22 +83,50 @@
 </template>
 
 <style scoped>
-.navbar-expand-lg .navbar-nav {
-	border-left: 1px solid;
+.user {
+	width: 8px;
 }
-.navbar-dark {
-	box-shadow: -1px 1px 3px grey !important;
+.nav-link,
+.d-flex {
+	color: #ffffff8f !important;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .show > .nav-link {
+	color: white !important;
+}
+.btns-active {
+	background: #2c4190;
+	color: white !important;
+}
+.navbar-expand-lg .navbar-nav {
+	border-left: 1px solid #ffffff4d;
+	height: 36px;
+	align-items: center;
+	justify-content: space-between;
+}
+.navbar {
+	box-shadow: 1px 3px 2px 0px #80808069 !important;
 	z-index: 1 !important;
 }
 
-.currencies {
+.container-btns {
 	height: 25px;
 }
-.interruptor {
+.btns-c {
 	height: 100%;
 }
 .off {
 	padding-right: 1rem;
+	width: 18px;
+	margin-right: 5px;
+}
+.border-start,
+.border-end {
+	border-left: 1px solid #ffffff4d !important ;
+	border-right: 1px solid #ffffff4d !important ;
+}
+.navbar-expand-lg .navbar-nav {
+	padding-left: 5px !important;
 }
 
 @media (min-width: 1024px) {
@@ -118,13 +139,13 @@
 	.navbar-expand-lg .navbar-nav .nav-link {
 		padding: 4px !important;
 	}
-	.navbar-dark {
+	.navbar {
 		font-size: 12px !important;
 	}
 	.gap-3 {
 		gap: 0.5rem !important;
 	}
-	.currencies {
+	.container-btns {
 		height: 20px !important;
 	}
 	.btn {
@@ -145,20 +166,18 @@
 	.logo {
 		width: 200px;
 	}
-	.navbar-expand-lg .navbar-nav {
-		padding-left: 5px !important;
-	}
+
 	.navbar-expand-lg .navbar-nav .nav-link {
 		padding: 5px !important;
 	}
 
-	.navbar-dark {
+	.navbar {
 		font-size: 14px !important;
 	}
 	.gap-3 {
 		gap: 0.5rem !important;
 	}
-	.currencies {
+	.container-btns {
 		height: 20px !important;
 	}
 	.btn {
@@ -170,13 +189,13 @@
 }
 
 @media (min-width: 1400px) {
-	.navbar-dark {
+	.navbar {
 		font-size: 16px !important;
 	}
-	.navbar-dark {
+	.navbar {
 		font-size: 16px !important;
 	}
-	.currencies {
+	.container-btns {
 		height: 25px !important;
 	}
 	.btn {

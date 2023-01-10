@@ -1,5 +1,5 @@
 <template>
-	<div class="d-flex bg-dark">
+	<div class="d-flex bg-darks">
 		<div class="bd-search" id="docsearch" data-bd-docs-version="5.2">
 			<input type="text" placeholder="Keyword Search" class="input-search" />
 			<svg
@@ -33,30 +33,31 @@
 				</div>
 			</span>
 			<span class="actions"
-				>Download
+				>Download:
 				<img src="../assets/download.svg" alt="" class="img-actions" />
 			</span>
 			<span class="actions"
-				>Upload <img src="../assets/upload.svg" alt="" class="img-actions" />
+				>Upload: <img src="../assets/upload.svg" alt="" class="img-actions" />
 			</span>
 			<span class="actions"
-				>Add <img src="../assets/plus.svg" alt="" class="img-actions" />
+				>Add: <img src="../assets/plus.png" style="opacity: 0.7" alt="" class="img-actions" />
 			</span>
 			<span class="actions"
-				>Saved <img src="../assets/saved.svg" alt="" class="img-actions" />
+				>Saved: <img src="../assets/saved.svg" alt="" class="img-actions" />
 			</span>
 			<span class="actions"
-				>Synced <img src="../assets/saved.svg" alt="" class="img-actions" />
+				>Synced: <img src="../assets/saved.svg" alt="" class="img-actions" />
 			</span>
 			<span class="actions"
-				>Delete <img src="../assets/delete.svg" alt="" class="img-actions" />
+				>Delete: <img src="../assets/delet.svg" alt="" class="img-actions" />
 			</span>
 		</div>
 	</div>
 </template>
 
 <style scoped>
-.bg-dark {
+.bg-darks {
+	background: #232227;
 	padding: 15px;
 }
 .d-flex {
@@ -68,12 +69,12 @@
 	position: relative;
 }
 .search-Icon {
-	bottom: 20%;
+	bottom: 30%;
 	left: 5%;
 }
 .input-search {
 	text-align: center;
-	background: #0000009e;
+	background: #0F0E13;
 	border: none;
 	border-radius: 5px;
 	padding: 8px;
@@ -86,15 +87,13 @@
 	align-items: center;
 	gap: 5px;
 }
-.img-actions {
-	width: 16px;
-}
+
 .lbl-switch {
 	display: flex;
 	align-items: center;
 	width: 40px;
 	height: 20px;
-	background: #ffffffc8;
+	background: #ffffff8f;
 	border-radius: 100px;
 	position: relative;
 	cursor: pointer;
@@ -108,7 +107,7 @@
 	content: "";
 	width: 25px;
 	height: 25px;
-	border: 1px solid #ffffffc8;
+	border: 1px solid #ffffff8f;
 	background: black;
 	border-radius: 100px;
 	left: 0;

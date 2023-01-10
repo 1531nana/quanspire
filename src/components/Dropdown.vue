@@ -1,6 +1,8 @@
 <template>
 	<div class="dropdown bg-black">
-		<span>CREATE/UPDATE: <img src="../assets/update.svg" alt="" /></span>
+		<span
+			>CREATE/UPDATE: <img src="../assets/update.svg" alt="" class="update"
+		/></span>
 		<label for="">COMPANY:</label>
 		<button
 			class="btn btn-secondary dpd-button"
@@ -48,22 +50,27 @@
 </template>
 
 <style scoped>
+.update {
+	padding-bottom: 8px;
+}
 .bg-black {
 	font-size: 12px;
 	display: flex;
 	gap: 25px;
 	align-items: center;
 	padding-left: 5px;
-  padding: 10px;
+	padding: 8px;
+	color: #ffffff8f !important;
 }
 .dpd-button {
 	width: 15%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background: #6c757d36 !important;
+	background: #0F0E13 !important;
+	/* background: #6c757d36 !important; */
 	border-radius: 0 !important;
-	padding: 5px !important;
+	padding: 5px 10px !important;
 	border-width: 0 0 2px 0;
 }
 button {

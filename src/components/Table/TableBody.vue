@@ -2,7 +2,6 @@
 	<tr
 		v-for="(data, i) in datas"
 		:key="i"
-		style="background: rgb(0 0 0 / 78%) !important"
 	>
 		<TableBodyActions />
 		<td>{{ `Q2460${index - 1}` }}</td>
