@@ -3,46 +3,26 @@
 		<span
 			>CREATE/UPDATE: <img src="../assets/update.svg" alt="" class="update"
 		/></span>
-		<label for="">COMPANY:</label>
-		<button
-			class="btn btn-secondary dpd-button"
-			type="button"
-			data-bs-toggle="dropdown"
-			aria-expanded="false"
+		<div
+			v-for="(label, index) in labels"
+			:key="index"
+			class="d-flex container-select"
 		>
-			QUANSPIRE <img src="../assets/select.svg" alt="" />
-		</button>
-		<ul class="dropdown-menu">
-			<li><a class="dropdown-item" href="#">SURA</a></li>
-			<li><a class="dropdown-item" href="#">Challenger</a></li>
-			<li><a class="dropdown-item" href="#">Acepalma</a></li>
-		</ul>
-		<label for="">PORTFOLIOS:</label>
-		<button
-			class="btn btn-secondary dpd-button"
-			type="button"
-			data-bs-toggle="dropdown"
-			aria-expanded="false"
-		>
-			1YLAYERS <img src="../assets/select.svg" alt="" />
-		</button>
-		<ul class="dropdown-menu">
-			<li><a class="dropdown-item" href="#">2YLAYERS</a></li>
-		</ul>
-		<label for="">CURRENCIES:</label>
-		<button
-			class="btn btn-secondary dpd-button"
-			type="button"
-			data-bs-toggle="dropdown"
-			aria-expanded="false"
-		>
-			USDCOP <img src="../assets/select.svg" alt="" />
-		</button>
-		<ul class="dropdown-menu">
-			<li v-for="(currencie, i) in currencies" :key="i">
-				<a class="dropdown-item" href="#">{{ currencie }}</a>
-			</li>
-		</ul>
+			<label for=""> {{ label }} </label>
+			<button
+				class="btn btn-secondary dpd-button"
+				type="button"
+				data-bs-toggle="dropdown"
+				aria-expanded="false"
+			>
+				{{ buttons[index] }} <img src="../assets/select.svg" alt="" />
+			</button>
+			<ul class="dropdown-menu">
+				<li v-for="option in options[index]" :key="option">
+					<a class="dropdown-item" href="#"> {{ option }} </a>
+				</li>
+			</ul>
+		</div>
 	</div>
 </template>
 
@@ -50,7 +30,13 @@
 export default {
 	data() {
 		return {
-			currencies: ["EUR", "YEN", "PEN", "MXN", "Corn", "Soya"],
+			labels: ["COMPANY:", "PORTFOLIOS:", "CURRENCIES:"],
+			buttons: ["QUANSPIRE", "1YLAYERS", "USDCOP"],
+			options: [
+				["SURA", "Challenger", "Acepalma"],
+				["2YLAYERS"],
+				["EUR", "YEN", "PEN", "MXN", "Corn", "Soya"],
+			],
 		};
 	},
 };
@@ -70,7 +56,7 @@ export default {
 	color: #ffffff8f !important;
 }
 .dpd-button {
-	width: 15%;
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -78,6 +64,7 @@ export default {
 	border-radius: 0 !important;
 	padding: 5px 10px !important;
 	border-width: 0 0 2px 0;
+	gap: 50px;
 }
 button {
 	font-size: 12px;
@@ -85,10 +72,14 @@ button {
 .dropdown-menu.show {
 	font-size: 12px !important ;
 }
+.container-select {
+	gap: 25px;
+	align-items: center;
+}
 
 @media (min-width: 1280px) {
 	.dpd-button {
-		width: 16%;
+		gap: 80px;
 	}
 	button {
 		font-size: 14px;
@@ -103,7 +94,7 @@ button {
 
 @media (min-width: 1400px) {
 	.dpd-button {
-		width: 16%;
+		gap: 100px;
 	}
 	button {
 		font-size: 16px;
@@ -113,6 +104,12 @@ button {
 	}
 	.bg-black {
 		font-size: 16px;
+	}
+}
+
+@media (min-width: 1700px) {
+	.dpd-button {
+		gap: 150px;
 	}
 }
 </style>

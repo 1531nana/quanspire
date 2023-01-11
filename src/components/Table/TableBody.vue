@@ -40,7 +40,7 @@ export default {
 			],
 			expDate: [
 				"15 Jan 10",
-				" 15 Feb 10",
+				"15 Feb 10",
 				"15 Mar 10",
 				"15 Apr 10",
 				"15 May 10",

@@ -32,34 +32,29 @@
 					<label for="btn-switch" class="lbl-switch"></label>
 				</div>
 			</span>
-			<span class="actions"
-				>Download:
-				<img src="../assets/download.svg" alt="" class="img-actions" />
-			</span>
-			<span class="actions"
-				>Upload: <img src="../assets/upload.svg" alt="" class="img-actions" />
-			</span>
-			<span class="actions"
-				>Add:
-				<img
-					src="../assets/plus.png"
-					style="opacity: 0.7"
-					alt=""
-					class="img-actions"
-				/>
-			</span>
-			<span class="actions"
-				>Saved: <img src="../assets/saved.svg" alt="" class="img-actions" />
-			</span>
-			<span class="actions"
-				>Synced: <img src="../assets/saved.svg" alt="" class="img-actions" />
-			</span>
-			<span class="actions"
-				>Delete: <img src="../assets/delet.svg" alt="" class="img-actions" />
+			<span v-for="(action, i) in actions" :key="i" class="actions">
+				{{ action }}
+				<img :src="getImages(imagesName[i])" :alt="imagesName[i]" class="img-actions" />
 			</span>
 		</div>
 	</div>
 </template>
+
+<script>
+export default {
+	data() {
+		return {
+			actions: ["Download:", "Upload:", "Add:", "Saved:", "Synced:", "Delete:"],
+			imagesName: ["download", "upload", "plus", "saved", "saved", "delet"],
+		};
+	},
+	methods: {
+		getImages(urlImg) {
+			return require("..\/assets\/" + urlImg + ".svg");
+		},
+	},
+};
+</script>
 
 <style scoped>
 .bg-darks {
