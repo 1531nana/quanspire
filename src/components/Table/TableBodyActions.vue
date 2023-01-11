@@ -2,10 +2,10 @@
 	<td>
 		<div class="d-flex">
 			<img
-				v-for="(im, i) in ['pencil', 'copy', 'delete']"
+				v-for="(imageName, i) in imagesNames"
 				:key="i"
-				:src="getImage(im)"
-				:alt="im"
+				:src="getImage(imageName)"
+				:alt="imageName"
 			/>
 		</div>
 	</td>
@@ -13,6 +13,11 @@
 
 <script>
 export default {
+	data(){
+		return{
+			imagesNames:  ['pencil', 'copy', 'delete']
+		}
+	},
 	methods: {
 		getImage(image) {
 			return require("..\/..\/assets\/" + image + ".svg");

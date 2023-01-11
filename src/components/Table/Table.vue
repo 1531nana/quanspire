@@ -1,79 +1,7 @@
 <template>
 	<div class="container-tableWithFooter">
 		<table class="table table-fixed" id="table">
-			<thead class="t-head">
-				<!-- <thead class="table-dark"> -->
-				<tr>
-					<th scope="col">
-						<div class="containerTheadTh" style="gap: 5px">
-							Actions
-							<img src="../../assets/arrows.svg" alt="" />
-						</div>
-					</th>
-					<th scope="col">
-						<div class="containerTheadTh">
-							Code <img src="../../assets/arrows.svg" alt="" />
-							<img src="../../assets/filter.svg" alt="" />
-						</div>
-					</th>
-					<th scope="col">
-						<div class="containerTheadTh">
-							Portfolio <img src="../../assets/arrows.svg" alt="" />
-							<img src="../../assets/filter.svg" alt="" />
-						</div>
-					</th>
-
-					<th scope="col" class="text-center">
-						<div class="containerTheadTh">
-							Rate <img src="../../assets/arrows.svg" alt="" />
-							<img src="../../assets/filter.svg" alt="" />
-						</div>
-					</th>
-					<th scope="col">
-						<div class="containerTheadTh">
-							Exposure Type <img src="../../assets/arrows.svg" alt="" />
-							<img src="../../assets/filter.svg" alt="" />
-						</div>
-					</th>
-					<th scope="col">
-						<div class="containerTheadTh">
-							Notional <img src="../../assets/arrows.svg" alt="" />
-							<img src="../../assets/filter.svg" alt="" />
-						</div>
-					</th>
-					<th scope="col">
-						<div class="containerTheadTh">
-							Currency <img src="../../assets/arrows.svg" alt="" />
-							<img src="../../assets/filter.svg" alt="" />
-						</div>
-					</th>
-					<th scope="col">
-						<div class="containerTheadTh">
-							Expected Cash Flow Date
-							<img src="../../assets/arrows.svg" alt="" />
-							<img src="../../assets/filter.svg" alt="" />
-						</div>
-					</th>
-					<th scope="col">
-						<div class="containerTheadTh">
-							Issue Date <img src="../../assets/arrows.svg" alt="" />
-							<img src="../../assets/filter.svg" alt="" />
-						</div>
-					</th>
-					<th scope="col">
-						<div class="containerTheadTh">
-							Rate at Issue Date <img src="../../assets/arrows.svg" alt="" />
-							<img src="../../assets/filter.svg" alt="" />
-						</div>
-					</th>
-					<th scope="col">
-						<div class="containerTheadTh">
-							Invoce Due Date <img src="../../assets/arrows.svg" alt="" />
-							<img src="../../assets/filter.svg" alt="" />
-						</div>
-					</th>
-				</tr>
-			</thead>
+			<TableHeader />
 			<tbody id="tbody">
 				<TableBody v-for="i in 11" :key="i" :index="i" />
 			</tbody>
@@ -86,20 +14,19 @@
 
 <script>
 import TableBody from "./TableBody.vue";
+import TableHeader from "./TableHeader.vue";
 import TableFooter from "../Pagination.vue";
 
 export default {
 	components: {
 		TableBody,
+		TableHeader,
 		TableFooter,
 	},
 };
 </script>
 
 <style scoped>
-.t-head {
-	background: #232227;
-}
 .container-tableFromFooter {
 	display: flex;
 	justify-content: space-between;
@@ -144,34 +71,12 @@ table::-webkit-scrollbar-track {
 	border-radius: 10px;
 	background: #49505742;
 }
-thead {
-	position: sticky;
-	top: 0;
-}
 tfoot {
 	position: sticky;
 	bottom: 0;
 }
-img {
-	width: 15px;
-}
 #table {
 	color: #ffffff8f !important;
-}
-thead th {
-	width: 170px;
-	font-size: 12px;
-	border: 1px solid #373b3e !important;
-	vertical-align: middle;
-	font-weight: lighter;
-	color: #ffffff8f;
-}
-.containerTheadTh {
-	display: flex;
-	flex-direction: row;
-	text-align: initial;
-	justify-content: flex-start;
-	align-items: center;
 }
 .table > tbody {
 	text-align: start !important;
@@ -190,13 +95,13 @@ thead th {
 	table {
 		height: 55vh;
 	}
-	thead th {
+	/* thead th {
 		font-size: 14px;
-	}
-	.containerTheadTh {
+	} */
+	/* .containerTheadTh {
 		padding: 5px 0;
 		gap: 5px;
-	}
+	} */
 	.table > tbody {
 		font-size: 14px;
 	}
@@ -204,12 +109,6 @@ thead th {
 @media (min-width: 1400px) {
 	table {
 		height: 65vh;
-	}
-	thead th {
-		font-size: 16px;
-	}
-	img {
-		width: 16px;
 	}
 }
 

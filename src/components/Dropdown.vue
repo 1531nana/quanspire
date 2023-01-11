@@ -39,15 +39,22 @@
 			USDCOP <img src="../assets/select.svg" alt="" />
 		</button>
 		<ul class="dropdown-menu">
-			<li><a class="dropdown-item" href="#">EUR</a></li>
-			<li><a class="dropdown-item" href="#">YEN</a></li>
-			<li><a class="dropdown-item" href="#">PEN</a></li>
-			<li><a class="dropdown-item" href="#">MXN</a></li>
-			<li><a class="dropdown-item" href="#">Corn</a></li>
-			<li><a class="dropdown-item" href="#">Soya</a></li>
+			<li v-for="(currencie, i) in currencies" :key="i">
+				<a class="dropdown-item" href="#">{{ currencie }}</a>
+			</li>
 		</ul>
 	</div>
 </template>
+
+<script>
+export default {
+	data() {
+		return {
+			currencies: ["EUR", "YEN", "PEN", "MXN", "Corn", "Soya"],
+		};
+	},
+};
+</script>
 
 <style scoped>
 .update {
@@ -67,8 +74,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background: #0F0E13 !important;
-	/* background: #6c757d36 !important; */
+	background: #0f0e13 !important;
 	border-radius: 0 !important;
 	padding: 5px 10px !important;
 	border-width: 0 0 2px 0;

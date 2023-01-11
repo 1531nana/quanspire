@@ -16,34 +16,12 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav">
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Overview</a>
+				<li v-for="(itemNav, i) in itemsNav" :key="i" class="nav-item">
+					<a class="nav-link" :class="{ 'active': i == 1}" href="#" >{{ itemNav }}</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link active" href="#">Data Model</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Analytics</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Markets</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Optimizer</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Hedge</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Trader</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Supervisor</a>
-				</li>
-			</ul>
+      </ul>
 		</div>
 		<div class="d-flex gap-3 align-items-center">
-			<div>
 				<div class="d-flex rounded-pill bg-dark flex-row container-btns">
 					<div
 						class="btn btn-primary rounded-pill border-0 d-flex align-items-center btns-c btns-active"
@@ -57,7 +35,6 @@
 					>
 						Commodities
 					</div>
-				</div>
 			</div>
 			<div class="d-flex flex-row gap-2 p-3 border-1 border-start border-end">
 				<div class="d-flex align-items-baseline gap-1">
@@ -81,6 +58,25 @@
 		</div>
 	</nav>
 </template>
+
+<script>
+export default {
+	data() {
+		return {
+			itemsNav: [
+				"Overview",
+				"Data Model",
+				"Analytics",
+				"Markets",
+				"Optimizer",
+				"Hedge",
+				"Trader",
+				"Supervisor",
+			],
+		};
+	},
+};
+</script>
 
 <style scoped>
 .user {

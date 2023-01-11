@@ -40,7 +40,13 @@
 				>Upload: <img src="../assets/upload.svg" alt="" class="img-actions" />
 			</span>
 			<span class="actions"
-				>Add: <img src="../assets/plus.png" style="opacity: 0.7" alt="" class="img-actions" />
+				>Add:
+				<img
+					src="../assets/plus.png"
+					style="opacity: 0.7"
+					alt=""
+					class="img-actions"
+				/>
 			</span>
 			<span class="actions"
 				>Saved: <img src="../assets/saved.svg" alt="" class="img-actions" />
@@ -74,7 +80,7 @@
 }
 .input-search {
 	text-align: center;
-	background: #0F0E13;
+	background: #0f0e13;
 	border: none;
 	border-radius: 5px;
 	padding: 8px;
