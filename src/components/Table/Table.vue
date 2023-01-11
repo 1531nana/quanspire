@@ -1,13 +1,13 @@
 <template>
 	<div class="container-tableWithFooter">
-		<table class="table table-fixed" id="table">
+		<table class="table" id="table">
 			<TableHeader />
 			<tbody id="tbody">
 				<TableBody v-for="i in 11" :key="i" :index="i" />
 			</tbody>
 		</table>
 		<div class="container-tableFromFooter">
-			<TableFooter />
+			<Pagination />
 		</div>
 	</div>
 </template>
@@ -15,13 +15,13 @@
 <script>
 import TableBody from "./TableBody.vue";
 import TableHeader from "./TableHeader.vue";
-import TableFooter from "../Pagination.vue";
+import Pagination from "../Pagination.vue";
 
 export default {
 	components: {
 		TableBody,
 		TableHeader,
-		TableFooter,
+		Pagination,
 	},
 };
 </script>
@@ -95,13 +95,6 @@ tfoot {
 	table {
 		height: 55vh;
 	}
-	/* thead th {
-		font-size: 14px;
-	} */
-	/* .containerTheadTh {
-		padding: 5px 0;
-		gap: 5px;
-	} */
 	.table > tbody {
 		font-size: 14px;
 	}
@@ -117,14 +110,4 @@ tfoot {
 		height: 48vh;
 	}
 }
-
-/* paleta de colores
-
-black: negro
-#0F0E13 : negro un poco más claro
-#232227: gris oscuro
-#ffffff8f : letra, gris más claro
-#2c4190 : azul 
-
-*/
 </style>

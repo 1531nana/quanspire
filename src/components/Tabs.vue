@@ -37,7 +37,7 @@
 	font-size: 14px;
 }
 .nav-tabs .nav-item.show .nav-link,
-.nav-tabs .nav-link.active {
+.nav-tabs .nav-link.active, .nav-link:hover {
 	background: #0b2b8c;
 	color: white;
 	border-radius: 0 10px 0 0 !important;
