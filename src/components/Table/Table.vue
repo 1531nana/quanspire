@@ -91,6 +91,11 @@ tfoot {
 	border-bottom-width: 0.1px !important;
 	border-bottom-color: #ffffff59 !important;
 }
+@media (max-height: 650px) {
+	table {
+		height: 50vh;
+	}
+}
 @media (min-width: 1280px) {
 	table {
 		height: 55vh;
